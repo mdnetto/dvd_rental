@@ -30,7 +30,6 @@ abstract class BaseController {
     }
 
     public function getBaseTemplateData() {
-        echo "We are in getBAseTemplateData";
         $categoryMapper = new \Dvd_rental\Mappers\CategoryMapper();
         $categories = $categoryMapper->all();
         return [

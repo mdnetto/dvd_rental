@@ -11,7 +11,6 @@ class FilmController extends BaseController {
     public function view($id, $col_name) {
         $mapper = $this->getMapperInstance();
         $model = $mapper->find($id, 'film_id');
-        $data = $this->getBaseTemplateData();
         $data['model'] = $model;
         $this->render('view.php', $data);
     }
